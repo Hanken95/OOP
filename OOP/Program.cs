@@ -19,6 +19,24 @@
             personHandler.ChangeWeight(person3, -5);
             personHandler.SetAge(person2, 23);
 
+            var userErrors = new List<UserError>()
+            {
+                new TextInputError(),
+                new TextInputError(),
+                new NumericInputError(),
+                new TextInputError(),
+                new NumericInputError(),
+                new EmptyInputError(),
+                new ImageInputError(),
+                new TooLongInputError()
+            };
+
+            foreach (var userError in userErrors)
+            {
+                Console.WriteLine(userError.UEMessage());
+            }
+
+            Console.ReadKey(true);
         }
     }
 }
