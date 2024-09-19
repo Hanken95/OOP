@@ -8,7 +8,22 @@ namespace OOP
 {
     public class Person
     {
-		private int age;
+		public Person(int age, string fName, string lName, double height, double weight) 
+		{
+			this.age = age;
+			this.fName = fName;
+			this.lName = lName;
+			this.height = height;
+			this.weight = weight;
+		}
+
+        public Person()
+        {
+
+        }
+
+
+        private int age;
 
 		public int Age
 		{
@@ -24,11 +39,15 @@ namespace OOP
 		}
 		private string fName;
 
-		public required string FName
+		public string FName
 		{
 			get { return fName; }
 			set 
 			{
+                if (value == null)
+                {
+                    throw new ArgumentNullException("Cannot be null");
+                }
                 if (value.Length < 2)
                 {
                     throw new ArgumentException("First name cannot be shorter than 2 characters");
@@ -42,11 +61,15 @@ namespace OOP
 		}
 		private string lName;
 
-		public required string LName
+		public string LName
 		{
 			get { return lName; }
 			set 
 			{
+                if (value == null)
+                {
+					throw new ArgumentNullException("Cannot be null");
+                }
                 if (value.Length < 3)
                 {
                     throw new ArgumentException("Last name cannot be shorter than 3 characters");
@@ -58,16 +81,16 @@ namespace OOP
                 lName = value; 
 			}
 		}
-		private int height;
+		private double height;
 
-		public int Height
+		public double Height
 		{
 			get { return height; }
 			set { height = value; }
 		}
-		private int weight;
+		private double weight;
 
-		public int Weight
+		public double Weight
 		{
 			get { return weight; }
 			set { weight = value; }
