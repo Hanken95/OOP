@@ -13,5 +13,17 @@ namespace OOP.Animals
         {
             Console.WriteLine("click");
         }
+
+        public override string Stats()
+        {
+            if (IsCute)
+            {
+                return base.Stats() + $", is cute";
+            }
+            else
+            {
+                return base.Stats() + $", is not cute";
+            }
+        }
     }
 }

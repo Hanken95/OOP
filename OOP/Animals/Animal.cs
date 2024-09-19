@@ -32,6 +32,10 @@ namespace OOP.Animals
 
         public abstract void DoSound();
 
+        public virtual string Stats()
+        {
+            return $"Name: {name}, Age: {age}, Weight: {weight}";
+        }
         protected Animal()
         {
 

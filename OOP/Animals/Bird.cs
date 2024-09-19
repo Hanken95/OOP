@@ -20,5 +20,16 @@ namespace OOP.Animals
         {
             Console.WriteLine("Chirp");
         }
+        public override string Stats()
+        {
+            if (canFly)
+            {
+                return base.Stats() + $", can fly";
+            }
+            else
+            {
+                return base.Stats() + $", cannot fly";
+            }
+        }
     }
 }
