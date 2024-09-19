@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OOP
+namespace OOP.Animals
 {
-    public abstract class UserError
+    internal class Flamingo : Bird
     {
-        public abstract string UEMessage();
+        public int Eyes { get; set; }
     }
 }

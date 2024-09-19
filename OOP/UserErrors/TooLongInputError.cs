@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OOP
+namespace OOP.UserErrors
 {
-    public class NumericInputError : UserError
+    internal class TooLongInputError : UserError
     {
         public override string UEMessage()
         {
-            return "You tried to use a numeric input in a text only field. This fired an error!";
+            return "You entered an input that was too long in a field. This fired an error!";
         }
     }
 }
