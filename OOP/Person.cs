@@ -13,21 +13,50 @@ namespace OOP
 		public int Age
 		{
 			get { return age; }
-			set { age = value; }
+			set 
+			{
+                if (value < 1)
+                {
+					throw new ArgumentException("Age cannot be below 1");
+                }
+                age = value; 
+			}
 		}
 		private string fName;
 
-		public string FName
+		public required string FName
 		{
 			get { return fName; }
-			set { fName = value; }
+			set 
+			{
+                if (value.Length < 2)
+                {
+                    throw new ArgumentException("First name cannot be shorter than 2 characters");
+                }
+                if (value.Length > 10)
+                {
+                    throw new ArgumentException("Last name cannot be longer than 10 characters");
+                }
+                fName = value; 
+			}
 		}
 		private string lName;
 
-		public string LName
+		public required string LName
 		{
 			get { return lName; }
-			set { lName = value; }
+			set 
+			{
+                if (value.Length < 3)
+                {
+                    throw new ArgumentException("Last name cannot be shorter than 3 characters");
+                }
+                if (value.Length > 15)
+                {
+                    throw new ArgumentException("Last name cannot be longer than 15 characters");
+                }
+                lName = value; 
+			}
 		}
 		private int height;
 
