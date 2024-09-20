@@ -13,13 +13,12 @@ namespace OOP.Animals
         {
             if (CanFly)
             {
-                return base.Stats() + $", can fly, has {Eyes} eyes, ";
+                return base.Stats() + $", can fly, has {Eyes} eyes";
             }
             else
             {
-                return base.Stats() + $", cannot fly, has {Eyes} eyes, ";
+                return base.Stats() + $", cannot fly, has {Eyes} eyes";
             }
         }
-    }
     }
 }

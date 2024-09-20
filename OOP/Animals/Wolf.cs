@@ -13,5 +13,10 @@ namespace OOP.Animals
         {
             Console.WriteLine("Grr");
         }
+        public override string Stats()
+        {
+            return base.Stats() + $", has {NumberOfTeeth} teeth";
+        }
+
     }
 }

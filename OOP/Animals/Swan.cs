@@ -9,5 +9,17 @@ namespace OOP.Animals
     internal class Swan : Bird
     {
         public int Feathers { get; set; }
+
+        public override string Stats()
+        {
+            if (CanFly)
+            {
+                return base.Stats() + $", can fly, has {Feathers} feathers";
+            }
+            else
+            {
+                return base.Stats() + $", cannot fly, has {Feathers} feathers";
+            }
+        }
     }
 }

@@ -13,5 +13,9 @@ namespace OOP.Animals
         {
             Console.WriteLine("slither");
         }
+        public override string Stats()
+        {
+            return base.Stats() + $", has {NumberOfHearts} hearts";
+        }
     }
 }
